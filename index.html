@@ -1,45 +1,109 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ELEVE DIGITAL</title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            background-color: #6A0DAD;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header img.logo {
+            width: 120px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            margin: 0;
+            padding: 10px;
+            list-style: none;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        section img.banner {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .whatsapp-float img {
+            width: 50px;
+        }
+        a {
+            color: #bb86fc;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img src="logo_eleve_digital.png" alt="Logo ELEVE DIGITAL" class="logo" />
         <h1>ELEVE DIGITAL</h1>
         <p>Elevando o nível da sua marca!</p>
     </header>
     <nav>
         <ul>
+            <li><a href="#home">Home</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#produtos">Produtos</a></li>
             <li><a href="#clientes">Clientes</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
+    <section id="home">
+        <img src="banner_home.png" alt="Banner Home" class="banner" />
+        <h2>Bem-vindo à ELEVE DIGITAL</h2>
+        <p>Estratégia, presença e resultados reais para o seu negócio.</p>
+    </section>
     <section id="servicos">
-        <h2>Serviços de Marketing Digital</h2>
-        <p>Gestão de tráfego, social media, branding, automações e muito mais.</p>
+        <img src="banner_servicos.png" alt="Banner Serviços" class="banner" />
+        <h2>Nossos Serviços</h2>
+        <p>Oferecemos soluções completas em marketing digital: gestão de tráfego, social media, branding, copywriting, automações, landing pages, sites e muito mais.</p>
     </section>
     <section id="produtos">
-        <h2>Produtos</h2>
-        <p>Pacotes digitais, templates e soluções personalizadas.</p>
+        <img src="banner_produtos.png" alt="Banner Produtos" class="banner" />
+        <h2>Produtos Digitais</h2>
+        <p>Cadastre e venda templates, e-books, consultorias e pacotes personalizados para empresas.</p>
     </section>
     <section id="clientes">
-        <h2>Clientes</h2>
-        <p>Empresas que confiaram na ELEVE DIGITAL e obtiveram resultados reais.</p>
+        <img src="banner_clientes.png" alt="Banner Clientes" class="banner" />
+        <h2>Clientes que confiaram na ELEVE</h2>
+        <p>Empresas de diferentes segmentos que cresceram com nossa estratégia.</p>
     </section>
     <section id="contato">
+        <img src="banner_contato.png" alt="Banner Contato" class="banner" />
         <h2>Contato</h2>
-        <p>Email: elevedigiital@gmail.com</p>
-        <p>Instagram: <a href="https://instagram.com/elevedigiital">@elevedigiital</a></p>
+        <p>Email: <a href="mailto:elevedigiital@gmail.com">elevedigiital@gmail.com</a></p>
+        <p>Instagram: <a href="https://instagram.com/elevedigiital" target="_blank">@elevedigiital</a></p>
     </section>
     <a href="https://wa.me/5564992310640" class="whatsapp-float" target="_blank">
         <img src="whatsapp-icon.png" alt="WhatsApp" />
     </a>
 </body>
 </html>
-    

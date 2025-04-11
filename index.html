@@ -13,35 +13,45 @@
         }
         header {
             background-color: #6A0DAD;
-            padding: 40px 20px;
-            text-align: center;
-            position: relative;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        header img.logo {
-            width: 120px;
-            display: block;
-            margin: 0 auto 10px auto;
+        .header-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
         }
-        .header-buttons {
+        .header-left,
+        .header-right {
+            flex: 1;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
         }
-        .header-buttons a {
+        .logo-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .logo {
+            width: 100px;
+        }
+        .header-button {
             background-color: #fff;
             color: #6A0DAD;
-            padding: 10px 20px;
+            padding: 8px 15px;
             text-decoration: none;
             border-radius: 20px;
             font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
-        .header-buttons a img {
-            width: 20px;
-            height: 20px;
+        .header-button img {
+            width: 18px;
+            height: 18px;
         }
         nav ul {
             display: flex;
@@ -97,16 +107,20 @@
 </head>
 <body>
     <header>
-        <img src="logo_eleve_digital.png" alt="Logo ELEVE DIGITAL" class="logo" />
-        <h1>ELEVE DIGITAL</h1>
-        <p>Elevando o nível da sua marca!</p>
-        <div class="header-buttons">
-            <a href="https://wa.me/5564992310640" target="_blank">
-                <img src="user-icon.png" alt="Especialista" /> Falar com um Especialista
-            </a>
-            <a href="https://instagram.com/elevedigiital" target="_blank">
-                <img src="question-icon.png" alt="Dúvida" /> Saber Mais
-            </a>
+        <div class="header-section">
+            <div class="header-left">
+                <a href="https://wa.me/5564992310640" target="_blank" class="header-button">
+                    <img src="user-icon.png" alt="Especialista" /> Falar com um Especialista
+                </a>
+            </div>
+            <div class="logo-center">
+                <img src="logo_eleve_digital.png" alt="Logo ELEVE DIGITAL" class="logo" />
+            </div>
+            <div class="header-right">
+                <a href="https://instagram.com/elevedigiital" target="_blank" class="header-button">
+                    <img src="question-icon.png" alt="Dúvida" /> Saber Mais
+                </a>
+            </div>
         </div>
     </header>
     <nav>

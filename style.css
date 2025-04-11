@@ -1,42 +1,59 @@
+from zipfile import ZipFile
+from PIL import Image, ImageDraw, ImageFont
+import os
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #000;
+# Diretório de trabalho
+output_dir = "/mnt/data/eleve_site_assets"
+os.makedirs(output_dir, exist_ok=True)
+
+# Lista de imagens a criar (simples, estilo minimalista, roxo/branco/preto)
+icon_specs = {
+    "user-icon.png": "👤",
+    "question-icon.png": "❓",
+    "whatsapp-icon.png": "📱",
+    "email-icon.png": "✉️",
+    "phone-icon.png": "📞",
+    "instagram-icon.png": "📸",
 }
-header {
-    background-color: #1e1e1e;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-}
-nav {
-    background-color: #6a0dad;
-    padding: 10px;
-    text-align: center;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-section {
-    padding: 40px 20px;
-}
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-}
-    
+
+# Função para criar ícones
+def create_icon(filename, emoji):
+    img = Image.new("RGB", (100, 100), color="#000000")
+    draw = ImageDraw.Draw(img)
+    font = ImageFont.load_default()
+    draw.text((25, 35), emoji, fill="#ffffff", font=font)
+    img.save(os.path.join(output_dir, filename))
+
+# Criar todos os ícones
+for name, emoji in icon_specs.items():
+    create_icon(name, emoji)
+
+# Criar banners simples para as seções
+banner_names = [
+    "banner_home.png",
+    "banner_servicos.png",
+    "banner_produtos.png",
+    "banner_clientes.png",
+    "banner_contato.png"
+]
+
+for name in banner_names:
+    banner = Image.new("RGB", (1200, 300), "#6A0DAD")  # roxo
+    draw = ImageDraw.Draw(banner)
+    draw.text((30, 130), name.replace("banner_", "").replace(".png", "").capitalize(), fill="white")
+    banner.save(os.path.join(output_dir, name))
+
+# Adicionar logo (usando imagem já enviada)
+logo_path = "/mnt/data/63E5EA08-D1FE-440C-8CC8-3EA9AA07D263.jpeg"
+logo_img = Image.open(logo_path)
+logo_resized = logo_img.resize((300, 300))
+logo_resized.save(os.path.join(output_dir, "logo_eleve_digital.png"))
+
+# Criar o arquivo zip
+zip_path = "/mnt/data/eleve_site_assets.zip"
+with ZipFile(zip_path, 'w') as zipf:
+    for root, dirs, files in os.walk(output_dir):
+        for file in files:
+            zipf.write(os.path.join(root, file), arcname=file)
+
+zip_path

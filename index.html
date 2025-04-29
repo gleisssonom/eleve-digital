@@ -1,175 +1,671 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ELEVE DIGITAL</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-        header {
-            background-color: #6A0DAD;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .header-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-        .header-left,
-        .header-right {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-        .logo-center {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-        .logo {
-            width: 100px;
-        }
-        .header-button {
-            background-color: #fff;
-            color: #6A0DAD;
-            padding: 8px 15px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .header-button img {
-            width: 18px;
-            height: 18px;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            background-color: #111;
-            margin: 0;
-            padding: 10px;
-            list-style: none;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        section img.banner {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-        }
-        .whatsapp-float img {
-            width: 50px;
-        }
-        a {
-            color: #bb86fc;
-        }
-        footer {
-            background-color: #111;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #bbb;
-        }
-        .contact-icons img {
-            width: 20px;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gleice Kelly Oliveira Moura - BM Borges e Moura Advogados Associados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Estilos gerais - Nova paleta de cores */
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #292d32;
+      color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header Reorganizado */
+    header {
+      background-color: #292d32;
+      padding: 15px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-nav-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      max-width: 180px;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-start;
+      gap: 15px;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    header nav ul li a:hover {
+      color: #d4af37;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(41, 45, 50, 0.7), rgba(41, 45, 50, 0.7)), url('sua-imagem-banner.jpg') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    
+    .hero .subtitulo {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: #d4af37;
+    }
+    
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #fff;
+    }
+
+    .hero .btn {
+      background-color: #d4af37;
+      color: #292d32;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .btn:hover {
+      background-color: #b8960c;
+    }
+
+    /* Sobre Mim */
+    .sobre {
+      padding: 60px 0;
+      background-color: #292d32;
+    }
+
+    .sobre h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .sobre-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .sobre-foto {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .advogada-foto {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      border: 3px solid #d4af37;
+    }
+    
+    .sobre-text {
+      flex: 2;
+      min-width: 300px;
+    }
+    
+    .sobre h3 {
+      color: #d4af37;
+      margin: 20px 0 10px;
+      font-size: 22px;
+    }
+    
+    .sobre ul {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+    
+    .sobre ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .sobre ul li:before {
+      content: "•";
+      color: #d4af37;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Áreas de Atuação */
+    .areas {
+      padding: 60px 0;
+      background-color: #292d32;
+      border-top: 1px solid #393e43;
+      border-bottom: 1px solid #393e43;
+    }
+
+    .areas h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #d4af37;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #333940;
+      padding: 30px;
+      border: 1px solid #444;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      border-color: #d4af37;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #d4af37;
+      margin-bottom: 15px;
+    }
+    
+    .card p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+        .conteudo-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .artigos, .eventos {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .conteudos h3 {
+      color: #d4af37;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    
+    .conteudos ul {
+      list-style: none;
+    }
+    
+    .conteudos ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    .conteudos ul li:before {
+      content: "•";
+      color: #d4af37;
+      position: absolute;
+      left: 0;
+    }
+    
+    .conteudos ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .conteudos ul li a:hover {
+      color: #d4af37;
+      text-decoration: underline;
+    }
+
+    /* Depoimentos */
+    .depoimentos {
+      padding: 60px 0;
+      background-color: #292d32;
+      border-top: 1px solid #393e43;
+    }
+
+    .depoimentos h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d4af37;
+    }
+
+    .depoimentos blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 600px;
+      text-align: center;
+      color: #ccc;
+      padding: 15px;
+      border-left: 3px solid #d4af37;
+      background-color: #333940;
+      border-radius: 5px;
+    }
+
+    /* Contato */
+    .contato {
+      padding: 60px 0;
+      background-color: #292d32;
+      border-top: 1px solid #393e43;
+    }
+
+    .contato h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #d4af37;
+    }
+
+    .contato-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    
+    .contato-dados {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .contato-form {
+      flex: 2;
+      min-width: 300px;
+    }
+    
+    .contato h3 {
+      color: #d4af37;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+    
+    .contato-dados ul {
+      list-style: none;
+    }
+    
+    .contato-dados ul li {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    
+    .contato-dados ul li strong {
+      color: #d4af37;
+      margin-right: 5px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      background-color: #333940;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    form input::placeholder, form textarea::placeholder {
+      color: #aaa;
+    }
+    
+    form button {
+      background-color: #d4af37;
+      color: #292d32;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    form button:hover {
+      background-color: #b8960c;
+    }
+
+    /* Footer Simplificado */
+    footer {
+      background-color: #292d32;
+      color: #ccc;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    
+    .footer-logo, .footer-contact {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .footer-logo p {
+      margin-top: 10px;
+      color: #d4af37;
+      font-weight: 500;
+    }
+    
+    .copyright {
+      border-top: 1px solid #444;
+      padding-top: 20px;
+      margin: 20px 0;
+    }
+
+    /* WhatsApp Button - Ajustado para mais acima */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 120px;
+      right: 30px;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+
+    .whatsapp-button a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: pulse 1.5s infinite;
+    }
+
+    .whatsapp-button svg {
+      fill: white;
+      width: 30px;
+      height: 30px;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-section">
-            <div class="header-left">
-                <a href="https://wa.me/5564992310640" target="_blank" class="header-button">
-                    <img src="user-icon.png" alt="Especialista" /> Falar com um Especialista
-                </a>
-            </div>
-            <div class="logo-center">
-                <img src="logo_eleve_digital.png" alt="Logo ELEVE DIGITAL" class="logo" />
-            </div>
-            <div class="header-right">
-                <a href="https://instagram.com/elevedigiital" target="_blank" class="header-button">
-                    <img src="question-icon.png" alt="Dúvida" /> Saber Mais
-                </a>
-            </div>
+
+  <!-- Topo do Site / Header Reorganizado -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-nav-container">
+          <!-- Substitua a linha abaixo pelo caminho da sua logo real quando implementar -->
+          <<img src="imagens/logo.png" alt="Logo BM Borges e Moura" class="logo">
+          <nav>
+            <ul>
+              <li><a href="#inicio">Início</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#areas">Áreas de Atuação</a></li>
+              <li><a href="#conteudos">Conteúdo</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </nav>
         </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#produtos">Produtos</a></li>
-            <li><a href="#clientes">Clientes</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-    <section id="home">
-        <img src="banner_home.png" alt="Banner Home" class="banner" />
-        <h2>Bem-vindo à ELEVE DIGITAL</h2>
-        <p>Estratégia, presença e resultados reais para o seu negócio.</p>
-    </section>
-    <section id="servicos">
-        <img src="banner_servicos.png" alt="Banner Serviços" class="banner" />
-        <h2>Nossos Serviços</h2>
-        <p>Oferecemos soluções completas em marketing digital: gestão de tráfego, social media, branding, copywriting, automações, landing pages, sites e muito mais.</p>
-    </section>
-    <section id="produtos">
-        <img src="banner_produtos.png" alt="Banner Produtos" class="banner" />
-        <h2>Produtos Digitais</h2>
-        <p>Cadastre e venda templates, e-books, consultorias e pacotes personalizados para empresas.</p>
-    </section>
-    <section id="clientes">
-        <img src="banner_clientes.png" alt="Banner Clientes" class="banner" />
-        <h2>Clientes que confiaram na ELEVE</h2>
-        <p>Empresas de diferentes segmentos que cresceram com nossa estratégia.</p>
-    </section>
-    <section id="contato">
-        <img src="banner_contato.png" alt="Banner Contato" class="banner" />
-        <h2>Contato</h2>
-        <p class="contact-icons">
-            <img src="email-icon.png" alt="Email Icon">Email: <a href="mailto:elevedigiital@gmail.com">elevedigiital@gmail.com</a>
-        </p>
-        <p class="contact-icons">
-            <img src="instagram-icon.png" alt="Instagram Icon">Instagram: <a href="https://instagram.com/elevedigiital" target="_blank">@elevedigiital</a>
-        </p>
-        <p class="contact-icons">
-            <img src="phone-icon.png" alt="WhatsApp Icon">WhatsApp: <a href="https://wa.me/5564992310640" target="_blank">(64) 99231-0640</a>
-        </p>
-    </section>
-    <a href="https://wa.me/5564992310640" class="whatsapp-float" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção Hero / Banner Principal -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h2>Gleice Kelly Oliveira Moura</h2>
+      <p class="subtitulo">Advogada OAB/GO 54.628</p>
+      <p>Defendendo seus direitos com excelência</p>
+      <a href="#contato" class="btn">Agende sua Consulta</a>
+    </div>
+  </section>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <div class="sobre-content">
+        <div class="sobre-foto">
+         <img src="imagens/advogada.jpg" alt="Dra. Gleice Kelly Oliveira Moura" class="advogada-foto">
+        </div>
+        <div class="sobre-text">
+          <p>Sou Gleice Kelly Oliveira Moura, advogada especializada em diversas áreas do Direito, com foco em defender os interesses dos meus clientes com excelência e dedicação.</p>
+          
+          <h3>Formação Acadêmica</h3>
+          <ul>
+            <li>Bacharela em Direito pelo Centro Universitário de Goiatuba/GO - UniCerrado</li>
+            <li>Pós-graduada em Direito Brasileiro</li>
+            <li>Advogada inscrita na OAB/GO sob o nº 54.628</li>
+          </ul>
+          
+          <h3>Experiência Profissional</h3>
+          <p>Possuo 6 anos de experiência na advocacia.</p>
+          
+          <h3>Missão, Visão e Valores</h3>
+          <p><strong>Missão:</strong> Proteger os direitos dos meus clientes com ética, compromisso e dedicação.</p>
+          <p><strong>Visão:</strong> Ser referência em advocacia personalizada e humanizada.</p>
+          <p><strong>Valores:</strong> Ética, transparência, excelência e compromisso com o cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Áreas de Atuação -->
+  <section id="areas" class="areas">
+    <div class="container">
+      <h2>Áreas de Atuação</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Direito Civil</h3>
+          <p>Contratos, responsabilidade civil, direitos reais e obrigações.</p>
+        </div>
+        <div class="card">
+          <h3>Direito de Família</h3>
+          <p>Divórcio, pensão alimentícia, guarda compartilhada e inventários.</p>
+        </div>
+        <div class="card">
+          <h3>Direito Trabalhista</h3>
+          <p>Reclamações trabalhistas, rescisões contratuais e direitos do trabalhador.</p>
+        </div>
+        <div class="card">
+          <h3>Direito Empresarial</h3>
+          <p>Contratos empresariais, abertura e fechamento de empresas.</p>
+        </div>
+        <div class="card">
+          <h3>Direito do Consumidor</h3>
+          <p>Defesa do consumidor, indenizações e contratos de consumo.</p>
+        </div>
+        <div class="card">
+          <h3>Direito Previdenciário</h3>
+          <p>Aposentadorias, benefícios por incapacidade e assistenciais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Conteúdos -->
+  <section id="conteudos" class="conteudos">
+    <div class="container">
+      <h2>Conteúdos Jurídicos</h2>
+      <div class="conteudo-wrapper">
+        <div class="artigos">
+          <h3>Artigos Recentes</h3>
+          <ul>
+            <li><a href="#">Como funciona o processo de pensão alimentícia no Brasil</a></li>
+            <li><a href="#">Direitos trabalhistas na demissão sem justa causa</a></li>
+            <li><a href="#">O passo a passo do processo de inventário e partilha</a></li>
+            <li><a href="#">Direito previdenciário: entenda as mudanças recentes</a></li>
+            <li><a href="#">Guarda compartilhada: vantagens e desafios</a></li>
+          </ul>
+        </div>
+        
+        <div class="eventos">
+          <h3>Participação em Eventos</h3>
+          <ul>
+            <li>Palestrante no Ciclo de Palestras Jurídicas da UniCerrado</li>
+            <li>Participação em congressos de Direito de Família</li>
+            <li>Workshop sobre Direitos do Consumidor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Depoimentos -->
+  <section class="depoimentos">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <blockquote>
+        "A Dra. Gleice Kelly demonstrou excepcional conhecimento jurídico e dedicação no meu caso de divórcio. Sua abordagem profissional e humana fez toda a diferença em um momento difícil." - João S.
+      </blockquote>
+      <blockquote>
+        "Graças à competência da Dra. Gleice, consegui resolver minha questão trabalhista rapidamente e com resultados acima das expectativas. Recomendo fortemente seus serviços!" - Maria L.
+      </blockquote>
+      <blockquote>
+        "Excelente atendimento, sempre disponível para esclarecer dúvidas e com grande conhecimento jurídico. Profissional extremamente ética e dedicada." - Carlos P.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="contato">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      
+      <div class="contato-info">
+        <div class="contato-dados">
+          <h3>Informações de Contato</h3>
+          <ul>
+            <li><strong>Telefone:</strong> (64) 9 9268-6474</li>
+            <li><strong>E-mail:</strong> mouragk@hotmail.com</li>
+            <li><strong>Endereço:</strong> Avenida da Saudade, n. 116, Setor Centro</li>
+            <li><strong>Horário:</strong> Segunda a Sexta, das 08:00 às 18:00h</li>
+          </ul>
+        </div>
+        
+        <div class="contato-form">
+          <form>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="tel" name="telefone" placeholder="Seu telefone">
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Rodapé Simplificado -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <!-- Substitua a linha abaixo pelo caminho da sua logo real quando implementar -->
+          <img src="imagens/logo.png" alt="Logo BM Borges e Moura" width="180" height="70">
+          <p>BM Borges e Moura Advogados Associados</p>
+        </div>
+        <div class="footer-contact">
+          <!-- Informações de contato removidas daqui conforme solicitado -->
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 BM Borges e Moura Advogados Associados. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante do WhatsApp com JavaScript para acompanhar o scroll -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/5564992686474" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 0 0-8.6 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2m0 1.9a8.1 8.1 0 0 1 8.1 8.1 8.1 8.1 0 0 1-8.1 8.1c-1.5 0-3-.4-4.3-1.2l-2.5.7.7-2.4a8.1 8.1 0 0 1-2-5.2 8.1 8.1 0 0 1 8.1-8.1M8.5 7.3a1 1 0 0 0-.7.3A2.8 2.8 0 0 0 7 9.6a4.8 4.8 0 0 0 1 2.6 10.8 10.8 0 0 0 4.5 3.8c2.1.8 2.6.7 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1 .1-1.2l-.5-.3-1.7-.8c-.3-.2-.5-.1-.7.2l-.7.9c-.2.1-.3.1-.6 0a7.2 7.2 0 0 1-2.1-1.3 8 8 0 0 1-1.4-1.8c-.1-.3 0-.5.1-.6l.4-.5.2-.4.1-.4-.1-.6-.9-2c-.2-.5-.4-.5-.6-.5l-.5-.1Z"/>
+      </svg>
     </a>
-    <footer>
-        &copy; 2025 ELEVE DIGITAL. Todos os direitos reservados.
-    </footer>
+  </div>
+  
+  <script>
+    // Script para controlar a visibilidade do botão do WhatsApp durante o scroll
+    window.addEventListener('scroll', function() {
+      const whatsappButton = document.querySelector('.whatsapp-button');
+      
+      // Verifica a posição do scroll
+      if (window.scrollY > 300) {
+        // Botão fica totalmente visível
+        whatsappButton.style.opacity = '1';
+      } else {
+        // Botão mantém visibilidade
+        whatsappButton.style.opacity = '1';
+      }
+    });
+  </script>
+
 </body>
 </html>
